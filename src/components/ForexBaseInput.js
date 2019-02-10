@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Row, Col, Input } from 'reactstrap';
 
-const CurrencyInput = ({ value, onChange }) => (
-  <Fragment>
+const ForexBaseInput = ({ value, onChange }) => (
+  <div className="header">
     <Row>
       <Col>
         <p>USD - United States Dollars</p>
@@ -15,14 +16,19 @@ const CurrencyInput = ({ value, onChange }) => (
       <Col>
         <Input
           type="number"
-          name="usdValue"
+          name="baseValue"
           value={value}
           onChange={onChange}
           placeholder="Enter Currency Value Here"
         />
       </Col>
     </Row>
-  </Fragment>
+  </div>
 );
 
-export default CurrencyInput;
+ForexBaseInput.propTypes = {
+  value: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired
+};
+
+export default ForexBaseInput;
