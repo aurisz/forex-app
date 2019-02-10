@@ -22,8 +22,8 @@ export const filterCurrencies = (source = [], target = []) => {
   return filtered;
 };
 
-export const formatCurrencyOptions = (curr = {}, selectedArray = []) => {
-  const currencyArray = getCurrencyNames(curr);
+export const formatCurrencyOptions = (currencies = {}, selectedArray = []) => {
+  const currencyArray = getCurrencyNames(currencies);
 
   return filterCurrencies(currencyArray, selectedArray);
 };
