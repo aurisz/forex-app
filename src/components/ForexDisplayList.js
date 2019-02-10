@@ -1,33 +1,36 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import ForexDisplayCard from './ForexDisplayCard';
 
 const ForexDisplayList = ({
+  error,
   isLoaded,
   currencies,
   rates,
   baseValue,
   handleDeleteCurrency
-}) => (
-  <div className="forex-display-list">
-    {isLoaded ? (
-      <Fragment>
-        {currencies.map(currency => (
-          <ForexDisplayCard
-            key={currency}
-            baseValue={baseValue}
-            currency={currency}
-            exchangeValue={rates[currency]}
-            onDeleteCurrency={handleDeleteCurrency}
-          />
-        ))}
-      </Fragment>
-    ) : (
-      <div className="loading">Loading...</div>
-    )}
-  </div>
-);
+}) => {
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+  if (!isLoaded) {
+    return <div className="loading">Loading...</div>;
+  }
+  return (
+    <div className="forex-display-list">
+      {currencies.map(currency => (
+        <ForexDisplayCard
+          key={currency}
+          baseValue={baseValue}
+          currency={currency}
+          exchangeValue={rates[currency]}
+          onDeleteCurrency={handleDeleteCurrency}
+        />
+      ))}
+    </div>
+  );
+};
 
 ForexDisplayList.propTypes = {
   isLoaded: PropTypes.bool,

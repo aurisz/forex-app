@@ -9,6 +9,7 @@ import { formatCurrencyOptions } from '../utils';
 
 class ForexContainer extends Component {
   state = {
+    error: null,
     isLoaded: false,
     baseValue: 10.0,
     currencyRates: {},
@@ -77,6 +78,7 @@ class ForexContainer extends Component {
 
   render() {
     const {
+      error,
       isLoaded,
       baseValue,
       currencyRates,
@@ -93,6 +95,7 @@ class ForexContainer extends Component {
         />
 
         <ForexDisplayList
+          error={error}
           isLoaded={isLoaded}
           baseValue={baseValue}
           currencies={currencyDisplays}
