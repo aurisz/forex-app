@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col, Input } from 'reactstrap';
 
-const ForexBaseInput = ({ value, onChange }) => (
+const ForexBaseInput = ({ value, onInputChange }) => (
   <div className="header">
     <Row>
       <Col>
@@ -17,9 +17,11 @@ const ForexBaseInput = ({ value, onChange }) => (
         <Input
           type="number"
           name="baseValue"
+          step="any"
+          min="0"
           value={value}
-          onChange={onChange}
-          placeholder="Enter Currency Value Here"
+          onChange={onInputChange}
+          placeholder="Enter Base Currency Value Here"
         />
       </Col>
     </Row>
@@ -27,8 +29,8 @@ const ForexBaseInput = ({ value, onChange }) => (
 );
 
 ForexBaseInput.propTypes = {
-  value: PropTypes.number.isRequired,
-  onChange: PropTypes.func.isRequired
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  onInputChange: PropTypes.func.isRequired
 };
 
 export default ForexBaseInput;

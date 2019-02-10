@@ -51,7 +51,8 @@ const ForexDisplayCard = ({
 
 ForexDisplayCard.propTypes = {
   currency: PropTypes.string.isRequired,
-  baseValue: PropTypes.number.isRequired,
+  baseValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    .isRequired,
   exchangeValue: PropTypes.number.isRequired,
   onDeleteCurrency: PropTypes.func.isRequired
 };

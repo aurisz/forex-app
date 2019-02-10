@@ -46,14 +46,14 @@ const ForexAddCurrency = ({
 
 ForexAddCurrency.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  value: PropTypes.number.isRequired,
+  value: PropTypes.string.isRequired,
   onInputChange: PropTypes.func.isRequired,
   onSubmitAddCurrency: PropTypes.func.isRequired,
   onClickAddMoreCurrency: PropTypes.func.isRequired,
   isAddMoreCurrency: PropTypes.bool
 };
 
-PropTypes.defaultProps = {
+ForexAddCurrency.defaultProps = {
   isAddMoreCurrency: false
 };
 

@@ -32,7 +32,8 @@ const ForexDisplayList = ({
 ForexDisplayList.propTypes = {
   isLoaded: PropTypes.bool,
   currencies: PropTypes.arrayOf(PropTypes.string).isRequired,
-  baseValue: PropTypes.number.isRequired,
+  baseValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    .isRequired,
   rates: PropTypes.objectOf(PropTypes.number).isRequired,
   handleDeleteCurrency: PropTypes.func.isRequired
 };

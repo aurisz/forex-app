@@ -10,7 +10,7 @@ import { formatCurrencyOptions } from '../utils';
 class ForexContainer extends Component {
   state = {
     isLoaded: false,
-    baseValue: 10,
+    baseValue: 10.0,
     currencyRates: {},
     currencyDisplays: ['IDR', 'EUR', 'GBP', 'SGD'],
     selectedNewCurrency: '',
@@ -39,7 +39,13 @@ class ForexContainer extends Component {
   handleInputChange = e => {
     const { value, name } = e.target;
 
-    this.setState({ [name]: value });
+    // special case for base value input
+    let inputValue = value;
+    if (name === 'baseValue') {
+      inputValue = parseFloat(value) || '';
+    }
+
+    this.setState({ [name]: inputValue });
   };
 
   handleClickAddMoreCurrency = () => {
@@ -81,7 +87,10 @@ class ForexContainer extends Component {
 
     return (
       <Container>
-        <ForexBaseInput value={baseValue} onChange={this.handleInputChange} />
+        <ForexBaseInput
+          value={baseValue}
+          onInputChange={this.handleInputChange}
+        />
 
         <ForexDisplayList
           isLoaded={isLoaded}
