@@ -4,7 +4,7 @@
 
 .header {
   margin-top: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #333;
 }
@@ -20,13 +20,14 @@
 
 .forex-column-right {
   display: flex;
+  justify-content: center;
   border-left: 1px solid #333;
-  margin-bottom: 15px;
+  padding-left: 0;
 }
 
 .btn-delete-currency {
   align-self: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .forex-card {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { Container } from 'reactstrap';
 
 import ForexBaseInput from '../components/ForexBaseInput';
@@ -15,27 +16,46 @@ class ForexContainer extends Component {
     currencyRates: {},
     currencyDisplays: ['IDR', 'EUR', 'GBP', 'SGD'],
     selectedNewCurrency: '',
-    isAddMoreCurrency: false
+    isAddMoreCurrency: false,
+    currencyNames: {}
   };
 
   componentDidMount() {
-    fetch('https://api.exchangeratesapi.io/latest?base=USD')
-      .then(res => res.json())
-      .then(
-        result => {
-          this.setState({
-            isLoaded: true,
-            currencyRates: result.rates
-          });
-        },
-        error => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      );
+    this.fetchCurrencyRates();
+    this.fetchCurrencyNames();
   }
+
+  fetchCurrencyRates = () => {
+    axios
+      .get('https://api.exchangeratesapi.io/latest?base=USD')
+      .then(response => {
+        this.setState({
+          isLoaded: true,
+          currencyRates: response.data.rates
+        });
+      })
+      .catch(error => {
+        this.setState({
+          isLoaded: true,
+          error
+        });
+      });
+  };
+
+  fetchCurrencyNames = () => {
+    axios
+      .get('https://openexchangerates.org/api/currencies.json')
+      .then(response => {
+        this.setState({
+          currencyNames: response.data
+        });
+      })
+      .catch(error => {
+        this.setState({
+          error
+        });
+      });
+  };
 
   handleInputChange = e => {
     const { value, name } = e.target;
@@ -84,7 +104,8 @@ class ForexContainer extends Component {
       currencyRates,
       currencyDisplays,
       selectedNewCurrency,
-      isAddMoreCurrency
+      isAddMoreCurrency,
+      currencyNames
     } = this.state;
 
     return (
@@ -100,6 +121,7 @@ class ForexContainer extends Component {
           baseValue={baseValue}
           currencies={currencyDisplays}
           rates={currencyRates}
+          currencyNames={currencyNames}
           handleDeleteCurrency={this.handleDeleteCurrency}
         />
 

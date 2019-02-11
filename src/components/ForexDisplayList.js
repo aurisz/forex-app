@@ -9,6 +9,7 @@ const ForexDisplayList = ({
   currencies,
   rates,
   baseValue,
+  currencyNames,
   handleDeleteCurrency
 }) => {
   if (error) {
@@ -25,6 +26,7 @@ const ForexDisplayList = ({
           baseValue={baseValue}
           currency={currency}
           exchangeValue={rates[currency]}
+          currencyName={currencyNames[currency]}
           onDeleteCurrency={handleDeleteCurrency}
         />
       ))}
@@ -38,6 +40,7 @@ ForexDisplayList.propTypes = {
   baseValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     .isRequired,
   rates: PropTypes.objectOf(PropTypes.number).isRequired,
+  currencyNames: PropTypes.objectOf(PropTypes.string).isRequired,
   handleDeleteCurrency: PropTypes.func.isRequired
 };
 

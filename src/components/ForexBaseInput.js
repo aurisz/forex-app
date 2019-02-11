@@ -6,12 +6,14 @@ const ForexBaseInput = ({ value, onInputChange }) => (
   <div className="header">
     <Row>
       <Col>
-        <p>USD - United States Dollars</p>
+        <p>
+          <em>USD - United States Dollars</em>
+        </p>
       </Col>
     </Row>
     <Row>
       <Col>
-        <h4>USD</h4>
+        <h3>USD</h3>
       </Col>
       <Col>
         <Input
