@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/forex-app/static/css/1.533d4b0a.chunk.css"
   },
   {
-    "revision": "5c5650d4be0eb7bf11417cc31f6d9120",
+    "revision": "9895dbc670d3c8a3478d673b66b3c499",
     "url": "/forex-app/index.html"
   }
 ];
