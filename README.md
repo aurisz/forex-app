@@ -2,16 +2,24 @@ Foreign Exchange Currency Converter built in React.
 
 ## Usage
 
+```sh
+git clone https://github.com/aurisz/forex-app.git
+cd forex-app
+npm install
+npm start
+```
+
 ### Docker
 
-Run this command
+Make sure Docker is installed and run this command
 
-`docker-compose up -d --build`
+```sh
+# This will build docker image and starts the container
+docker-compose up -d --build
+```
 
-This will build docker image and starts the container
-
-Now open `http://localhost:8000`
+Wait until finished and then open `http://localhost:8000`
 
 ## Live Demo
 
-visit <https://aurisz.github.io/forex-app/>
+<https://aurisz.github.io/forex-app/>
