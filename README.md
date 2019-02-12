@@ -4,11 +4,13 @@ Foreign Exchange Currency Converter built in React.
 
 ### Docker
 
-run this command
-`docker-compose up -d --build`
-This will build docker container and spin it up
+Run this command
 
-### Now open `http://localhost:8000`
+`docker-compose up -d --build`
+
+This will build docker image and starts the container
+
+Now open `http://localhost:8000`
 
 ## Live Demo
 
