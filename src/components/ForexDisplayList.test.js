@@ -2,9 +2,9 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 
-import ForexDisplayList from '../components/ForexDisplayList';
+import ForexDisplayList from './ForexDisplayList';
 
-describe('Forex Display List', () => {
+describe('<ForexDisplayList />', () => {
   const testProps = {
     error: null,
     isLoaded: true,
@@ -37,6 +37,12 @@ describe('Forex Display List', () => {
   });
   it('should render display list', () => {
     const tree = renderer.create(<ForexDisplayList {...testProps} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render without crash if list is empty', () => {
+    const tree = renderer
+      .create(<ForexDisplayList {...testProps} currencies={[]} />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

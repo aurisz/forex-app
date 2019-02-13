@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ForexAddCurrency /> should render button to add new currency 1`] = `
+<div
+  className="forex-add-currency"
+>
+  <button
+    aria-label={null}
+    className="btn btn-info btn-block"
+    id="addMoreCurrency"
+    onClick={[Function]}
+    type="button"
+  >
+    (+) Add More Currencies
+  </button>
+</div>
+`;
+
+exports[`<ForexAddCurrency /> should render dropdown to select currency 1`] = `
+<div
+  className="forex-add-currency"
+>
+  <div
+    className="input-group"
+  >
+    <select
+      className="form-control"
+      name="selectedNewCurrency"
+      onChange={[MockFunction]}
+      value="EUR"
+    >
+      <option
+        value=""
+      >
+        Select Currency!
+      </option>
+      <option
+        value="IDR"
+      >
+        IDR
+      </option>
+    </select>
+    <div
+      className="input-group-append"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-primary"
+        disabled={false}
+        id="submitNewCurrency"
+        onClick={[Function]}
+        type="button"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ForexAddCurrency /> submit currency button should be disabled 1`] = `
+<div
+  className="forex-add-currency"
+>
+  <div
+    className="input-group"
+  >
+    <select
+      className="form-control"
+      name="selectedNewCurrency"
+      onChange={[MockFunction]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select Currency!
+      </option>
+      <option
+        value="IDR"
+      >
+        IDR
+      </option>
+    </select>
+    <div
+      className="input-group-append"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-primary disabled"
+        disabled={true}
+        id="submitNewCurrency"
+        onClick={[Function]}
+        type="button"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
+`;

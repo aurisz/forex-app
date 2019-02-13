@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Forex Container renders correctly 1`] = `
+exports[`<ForexContainer /> renders correctly 1`] = `
 <div
   className="container"
 >
@@ -35,7 +35,7 @@ exports[`Forex Container renders correctly 1`] = `
       >
         <input
           className="form-control"
-          min="0"
+          id="baseValueInput"
           name="baseValue"
           onChange={[Function]}
           placeholder="Enter Base Currency Value Here"
@@ -57,6 +57,7 @@ exports[`Forex Container renders correctly 1`] = `
     <button
       aria-label={null}
       className="btn btn-info btn-block"
+      id="addMoreCurrency"
       onClick={[Function]}
       type="button"
     >

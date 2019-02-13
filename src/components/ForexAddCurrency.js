@@ -28,6 +28,7 @@ const ForexAddCurrency = ({
         </Input>
         <InputGroupAddon addonType="append">
           <Button
+            id="submitNewCurrency"
             color="primary"
             onClick={onSubmitAddCurrency}
             disabled={value === ''}
@@ -37,7 +38,12 @@ const ForexAddCurrency = ({
         </InputGroupAddon>
       </InputGroup>
     ) : (
-      <Button color="info" block onClick={onClickAddMoreCurrency}>
+      <Button
+        id="addMoreCurrency"
+        color="info"
+        block
+        onClick={onClickAddMoreCurrency}
+      >
         (+) Add More Currencies
       </Button>
     )}

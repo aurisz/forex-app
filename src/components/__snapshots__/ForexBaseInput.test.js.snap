@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ForexBaseInput /> should accept value of empty strings 1`] = `
+<div
+  className="header"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <p>
+        <em>
+          USD - United States Dollars
+        </em>
+      </p>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <h3>
+        USD
+      </h3>
+    </div>
+    <div
+      className="col"
+    >
+      <input
+        className="form-control"
+        id="baseValueInput"
+        name="baseValue"
+        onChange={[MockFunction]}
+        placeholder="Enter Base Currency Value Here"
+        step="any"
+        type="number"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ForexBaseInput /> should accept value of float 1`] = `
+<div
+  className="header"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <p>
+        <em>
+          USD - United States Dollars
+        </em>
+      </p>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <h3>
+        USD
+      </h3>
+    </div>
+    <div
+      className="col"
+    >
+      <input
+        className="form-control"
+        id="baseValueInput"
+        name="baseValue"
+        onChange={[MockFunction]}
+        placeholder="Enter Base Currency Value Here"
+        step="any"
+        type="number"
+        value={10.5}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ForexBaseInput /> should accept value of integer 1`] = `
+<div
+  className="header"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <p>
+        <em>
+          USD - United States Dollars
+        </em>
+      </p>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <h3>
+        USD
+      </h3>
+    </div>
+    <div
+      className="col"
+    >
+      <input
+        className="form-control"
+        id="baseValueInput"
+        name="baseValue"
+        onChange={[MockFunction]}
+        placeholder="Enter Base Currency Value Here"
+        step="any"
+        type="number"
+        value={20}
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -17,10 +17,10 @@ const ForexBaseInput = ({ value, onInputChange }) => (
       </Col>
       <Col>
         <Input
+          id="baseValueInput"
           type="number"
           name="baseValue"
           step="any"
-          min="0"
           value={value}
           onChange={onInputChange}
           placeholder="Enter Base Currency Value Here"

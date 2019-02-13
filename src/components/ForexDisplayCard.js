@@ -46,6 +46,7 @@ const ForexDisplayCard = ({
 
       <Col sm={1} xs={3} className="forex-column-right">
         <Button
+          id="deleteCurrency"
           className="btn-delete-currency"
           color="default"
           block

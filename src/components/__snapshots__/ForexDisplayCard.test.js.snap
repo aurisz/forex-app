@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Forex Display Card renders correctly 1`] = `
+exports[`<ForexDisplayCard /> renders correctly 1`] = `
 <div
   className="forex-card card"
 >
@@ -70,6 +70,7 @@ exports[`Forex Display Card renders correctly 1`] = `
       <button
         aria-label={null}
         className="btn-delete-currency btn btn-default btn-block"
+        id="deleteCurrency"
         onClick={[Function]}
         title="Delete Currency"
         type="button"
