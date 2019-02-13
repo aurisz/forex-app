@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Forex Container renders correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="header"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+      >
+        <p>
+          <em>
+            USD - United States Dollars
+          </em>
+        </p>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+      >
+        <h3>
+          USD
+        </h3>
+      </div>
+      <div
+        className="col"
+      >
+        <input
+          className="form-control"
+          min="0"
+          name="baseValue"
+          onChange={[Function]}
+          placeholder="Enter Base Currency Value Here"
+          step="any"
+          type="number"
+          value={10}
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="loading"
+  >
+    Loading...
+  </div>
+  <div
+    className="forex-add-currency"
+  >
+    <button
+      aria-label={null}
+      className="btn btn-info btn-block"
+      onClick={[Function]}
+      type="button"
+    >
+      (+) Add More Currencies
+    </button>
+  </div>
+</div>
+`;

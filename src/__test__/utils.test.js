@@ -4,7 +4,7 @@ import {
   filterCurrencies,
   formatCurrencyOptions,
   getExchangeRates
-} from './index';
+} from '../utils';
 
 const ratesExample = {
   IDR: 13965.0008813679,

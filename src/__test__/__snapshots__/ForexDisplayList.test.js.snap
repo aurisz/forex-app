@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Forex Display List should render display list 1`] = `
+<div
+  className="forex-display-list"
+>
+  <div
+    className="forex-card card"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="forex-column-left col-9 col-sm-11"
+      >
+        <div
+          className="card-body"
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col"
+            >
+              <h4>
+                IDR
+              </h4>
+            </div>
+            <div
+              className="col"
+            >
+              <h4
+                className="exchange-value"
+              >
+                123,230.00
+              </h4>
+            </div>
+          </div>
+          <div
+            className="row"
+          >
+            <div
+              className="col"
+            >
+              <h6>
+                <em>
+                  IDR
+                   - 
+                  Rupiah
+                </em>
+              </h6>
+            </div>
+          </div>
+          <div
+            className="row"
+          >
+            <div
+              className="col"
+            >
+              <span>
+                1 USD = 
+                IDR
+                 
+                12,323.00
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="forex-column-right col-3 col-sm-1"
+      >
+        <button
+          aria-label={null}
+          className="btn-delete-currency btn btn-default btn-block"
+          onClick={[Function]}
+          title="Delete Currency"
+          type="button"
+        >
+          <span>
+            (-)
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Forex Display List should render error message 1`] = `
+<div>
+  Error: 
+  error
+</div>
+`;
+
+exports[`Forex Display List should render loading 1`] = `
+<div
+  className="loading"
+>
+  Loading...
+</div>
+`;
