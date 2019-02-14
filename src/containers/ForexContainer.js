@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { Container } from 'reactstrap';
 
 import ForexBaseInput from '../components/ForexBaseInput';
@@ -7,6 +6,7 @@ import ForexAddCurrency from '../components/ForexAddCurrency';
 import ForexDisplayList from '../components/ForexDisplayList';
 
 import { formatCurrencyOptions } from '../utils';
+import { getCurrencyRates, getCurrencyNames } from '../utils/request';
 
 class ForexContainer extends Component {
   state = {
@@ -26,8 +26,7 @@ class ForexContainer extends Component {
   }
 
   fetchCurrencyRates = () => {
-    axios
-      .get('https://api.exchangeratesapi.io/latest?base=USD')
+    getCurrencyRates()
       .then(response => {
         this.setState({
           isLoaded: true,
@@ -43,8 +42,7 @@ class ForexContainer extends Component {
   };
 
   fetchCurrencyNames = () => {
-    axios
-      .get('https://openexchangerates.org/api/currencies.json')
+    getCurrencyNames()
       .then(response => {
         this.setState({
           currencyNames: response.data

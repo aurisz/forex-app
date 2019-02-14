@@ -22,10 +22,13 @@ export const filterCurrencies = (source = [], target = []) => {
   return filtered;
 };
 
-export const formatCurrencyOptions = (currencies = {}, selectedArray = []) => {
-  const currencyArray = getCurrencyNames(currencies);
+export const formatCurrencyOptions = (
+  currencies = {},
+  currenciesToHide = []
+) => {
+  const currencyNames = getCurrencyNames(currencies);
 
-  return filterCurrencies(currencyArray, selectedArray);
+  return filterCurrencies(currencyNames, currenciesToHide);
 };
 
 // calculate exchange rates
