@@ -1,15 +1,15 @@
 {
   "main.css": "/forex-app/static/css/main.6cf959ed.chunk.css",
-  "main.js": "/forex-app/static/js/main.544662a6.chunk.js",
-  "main.js.map": "/forex-app/static/js/main.544662a6.chunk.js.map",
+  "main.js": "/forex-app/static/js/main.46ed2920.chunk.js",
+  "main.js.map": "/forex-app/static/js/main.46ed2920.chunk.js.map",
   "static/css/1.533d4b0a.chunk.css": "/forex-app/static/css/1.533d4b0a.chunk.css",
-  "static/js/1.5f378e56.chunk.js": "/forex-app/static/js/1.5f378e56.chunk.js",
-  "static/js/1.5f378e56.chunk.js.map": "/forex-app/static/js/1.5f378e56.chunk.js.map",
+  "static/js/1.c59f5a45.chunk.js": "/forex-app/static/js/1.c59f5a45.chunk.js",
+  "static/js/1.c59f5a45.chunk.js.map": "/forex-app/static/js/1.c59f5a45.chunk.js.map",
   "runtime~main.js": "/forex-app/static/js/runtime~main.fc4c36ed.js",
   "runtime~main.js.map": "/forex-app/static/js/runtime~main.fc4c36ed.js.map",
   "static/css/1.533d4b0a.chunk.css.map": "/forex-app/static/css/1.533d4b0a.chunk.css.map",
   "static/css/main.6cf959ed.chunk.css.map": "/forex-app/static/css/main.6cf959ed.chunk.css.map",
   "index.html": "/forex-app/index.html",
-  "precache-manifest.8bf72db253ad0959f2367b58bf86fd55.js": "/forex-app/precache-manifest.8bf72db253ad0959f2367b58bf86fd55.js",
+  "precache-manifest.2e47e17b4745bc61aeb5635c192900eb.js": "/forex-app/precache-manifest.2e47e17b4745bc61aeb5635c192900eb.js",
   "service-worker.js": "/forex-app/service-worker.js"
 }
